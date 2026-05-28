@@ -1,158 +1,312 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 
 <head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Fabrizio Manuel Flores Valencia</title>
 
     <meta name="description"
     content="Página personal de Fabrizio Manuel Flores Valencia, estudiante de Ciencias de la Computación en la UCSP">
 
-   <style>
+    <style>
 
-    body{
-        margin: 0;
-        padding: 0;
-        font-family: Arial;
-        background: linear-gradient(135deg, #0f0f0f, #1f1f1f, #2d3436);
-        color: white;
-        text-align: center;
-        animation: fondo 10s infinite alternate;
-    }
+        html{
+            scroll-behavior: smooth;
+        }
 
-    @keyframes fondo{
-        0%{
+        body{
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
             background: linear-gradient(135deg, #0f0f0f, #1f1f1f, #2d3436);
+            background-size: 400% 400%;
+            animation: fondo 12s ease infinite;
+            color: white;
         }
 
-        100%{
-            background: linear-gradient(135deg, #141e30, #243b55, #000000);
-        }
-    }
+        @keyframes fondo{
+            0%{
+                background-position: 0% 50%;
+            }
 
-    .bienvenida{
-        background: linear-gradient(to right, #232526, #414345);
-        padding: 35px;
-        font-size: 38px;
-        font-weight: bold;
-        letter-spacing: 1px;
-        box-shadow: 0px 5px 15px rgba(0,0,0,0.5);
+            50%{
+                background-position: 100% 50%;
+            }
 
-        animation: aparecer 2s ease;
-    }
-
-    h1{
-        font-size: 60px;
-        margin-top: 40px;
-        margin-bottom: 40px;
-        color: white;
-        text-shadow: 3px 3px 15px black;
-
-        animation: bajar 1.5s ease;
-    }
-
-    .caja{
-        width: 75%;
-        margin: 40px auto;
-        padding: 35px;
-        border-radius: 25px;
-        box-shadow: 0px 8px 25px rgba(0,0,0,0.5);
-
-        transition: 0.4s;
-
-        animation: aparecer 1.5s ease;
-    }
-
-    .caja:hover{
-        transform: translateY(-10px) scale(1.02);
-    }
-
-    .fila{
-        display: flex;
-        justify-content: center;
-        gap: 30px;
-        margin: 50px;
-        flex-wrap: wrap;
-    }
-
-    .mini-caja{
-        width: 240px;
-        padding: 30px;
-        border-radius: 25px;
-        box-shadow: 0px 8px 20px rgba(0,0,0,0.5);
-
-        transition: 0.4s;
-
-        animation: zoom 1.5s ease;
-    }
-
-    .mini-caja:hover{
-        transform: scale(1.08) rotate(2deg);
-    }
-
-    @keyframes aparecer{
-        from{
-            opacity: 0;
-            transform: translateY(30px);
+            100%{
+                background-position: 0% 50%;
+            }
         }
 
-        to{
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
+        .navbar{
+            position: sticky;
+            top: 0;
+            z-index: 1000;
 
-    @keyframes bajar{
-        from{
-            opacity: 0;
-            transform: translateY(-50px);
-        }
+            display: flex;
+            justify-content: center;
+            gap: 40px;
 
-        to{
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
+            padding: 20px;
 
-    @keyframes zoom{
-        from{
-            opacity: 0;
-            transform: scale(0.5);
+            background: rgba(0,0,0,0.6);
+            backdrop-filter: blur(10px);
+
+            box-shadow: 0px 5px 20px rgba(0,0,0,0.5);
         }
 
-        to{
-            opacity: 1;
-            transform: scale(1);
+        .navbar a{
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            transition: 0.3s;
         }
-    }
 
-</style>
+        .navbar a:hover{
+            color: #4da6ff;
+            transform: scale(1.1);
+        }
+
+        .bienvenida{
+            text-align: center;
+            padding: 60px 20px 20px 20px;
+            font-size: 35px;
+            font-weight: bold;
+
+            animation: aparecer 2s ease;
+        }
+
+        .typing{
+            width: 100%;
+            overflow: hidden;
+            white-space: nowrap;
+
+            border-right: 3px solid white;
+
+            text-align: center;
+            font-size: 60px;
+
+            margin: auto;
+
+            animation:
+            typing 4s steps(40),
+            blink .8s infinite;
+        }
+
+        @keyframes typing{
+            from{
+                width: 0;
+            }
+
+            to{
+                width: 100%;
+            }
+        }
+
+        @keyframes blink{
+            50%{
+                border-color: transparent;
+            }
+        }
+
+        .caja{
+            width: 75%;
+
+            margin: 80px auto;
+
+            padding: 40px;
+
+            border-radius: 25px;
+
+            background: rgba(255,255,255,0.08);
+
+            backdrop-filter: blur(10px);
+
+            box-shadow: 0px 10px 40px rgba(0,0,0,0.6);
+
+            transition: 0.4s;
+
+            animation: aparecer 1.5s ease;
+        }
+
+        .caja:hover{
+            transform: translateY(-10px) scale(1.01);
+        }
+
+        .sobre{
+            border-left: 8px solid #4da6ff;
+        }
+
+        .cursos{
+            border-left: 8px solid #9b59b6;
+        }
+
+        .companeros{
+            border-left: 8px solid #2ecc71;
+        }
+
+        .metas{
+            border-left: 8px solid #f39c12;
+        }
+
+        .contacto{
+            border-left: 8px solid #e74c3c;
+        }
+
+        .fila{
+            display: flex;
+            justify-content: center;
+            gap: 35px;
+
+            margin: 60px;
+
+            flex-wrap: wrap;
+        }
+
+        .mini-caja{
+            width: 240px;
+
+            padding: 30px;
+
+            border-radius: 20px;
+
+            background: rgba(255,255,255,0.08);
+
+            backdrop-filter: blur(10px);
+
+            box-shadow: 0px 8px 20px rgba(0,0,0,0.5);
+
+            transition: 0.4s;
+
+            animation: zoom 1.5s ease;
+        }
+
+        .mini-caja:hover{
+            transform: scale(1.08);
+        }
+
+        .edad{
+            border-top: 6px solid #3498db;
+        }
+
+        .ciudad{
+            border-top: 6px solid #9b59b6;
+        }
+
+        .habilidades{
+            border-top: 6px solid #2ecc71;
+        }
+
+        @keyframes aparecer{
+            from{
+                opacity: 0;
+                transform: translateY(40px);
+            }
+
+            to{
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes zoom{
+            from{
+                opacity: 0;
+                transform: scale(0.5);
+            }
+
+            to{
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        h1{
+            text-align: center;
+        }
+
+        h2{
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        p, li{
+            font-size: 20px;
+            line-height: 1.8;
+        }
+
+        ul{
+            list-style: none;
+            padding: 0;
+        }
+
+        a{
+            color: #4da6ff;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        a:hover{
+            color: white;
+        }
+
+        .footer{
+            text-align: center;
+
+            margin-top: 80px;
+
+            padding: 30px;
+
+            background: rgba(0,0,0,0.4);
+
+            font-size: 18px;
+        }
+
+    </style>
 
 </head>
 
 <body>
 
-    <div class="bienvenida">
-        Bienvenido a la página web de Fabrizio Manuel Flores Valencia
+    <div class="navbar">
+
+        <a href="#sobre">Sobre mí</a>
+
+        <a href="#cursos">Cursos</a>
+
+        <a href="#companeros">Compañeros</a>
+
+        <a href="#contacto">Contacto</a>
+
     </div>
 
-    <h1>Fabrizio Manuel Flores Valencia</h1>
+    <div class="bienvenida">
+        Bienvenido a mi página web
+    </div>
 
-    <div class="caja">
+    <h1 class="typing">
+        Fabrizio Manuel Flores Valencia
+    </h1>
+
+    <div class="caja sobre" id="sobre">
 
         <h2>Sobre mí</h2>
 
         <p>
             Soy estudiante de Ciencias de la Computación en la Universidad Católica San Pablo (UCSP).
-            Me interesa el desarrollo de software, los deportes y los videojuegos
-            Me considero una persona responsable, curiosa, activa y con capacidad de trabajo en equipo.
+            Me interesa la programación, la tecnología y el desarrollo de software.
+            Me considero una persona responsable, curiosa y con capacidad de trabajo en equipo.
         </p>
 
     </div>
 
     <div class="fila">
 
-        <div class="mini-caja">
+        <div class="mini-caja edad">
 
             <h2>Edad</h2>
 
@@ -162,7 +316,7 @@
 
         </div>
 
-        <div class="mini-caja">
+        <div class="mini-caja ciudad">
 
             <h2>Ciudad</h2>
 
@@ -172,7 +326,7 @@
 
         </div>
 
-        <div class="mini-caja">
+        <div class="mini-caja habilidades">
 
             <h2>Habilidades</h2>
 
@@ -185,7 +339,7 @@
 
     </div>
 
-    <div class="caja">
+    <div class="caja cursos" id="cursos">
 
         <h2>Cursos y Profesores</h2>
 
@@ -243,14 +397,14 @@
 
     </div>
 
-    <div class="caja">
+    <div class="caja companeros" id="companeros">
 
         <h2>Compañeros</h2>
 
         <ul>
 
             <li>
-                <a href="#">
+                <a href="https://faviom15.github.io/favio-cesar-portfolio/" target="_blank">
                     Favio Mendigure
                 </a>
             </li>
@@ -282,7 +436,7 @@
             <br>
 
             <li>
-                <a href="#">
+                <a href="https://mateomaldonadovalencia.github.io/" target="_blank">
                     Mateo Maldonado
                 </a>
             </li>
@@ -291,7 +445,7 @@
 
     </div>
 
-    <div class="caja">
+    <div class="caja metas">
 
         <h2>Metas</h2>
 
@@ -302,7 +456,7 @@
 
     </div>
 
-    <div class="caja">
+    <div class="caja contacto" id="contacto">
 
         <h2>Contacto</h2>
 
