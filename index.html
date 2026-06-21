@@ -1,511 +1,197 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-
-    <meta charset="UTF-8">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Fabrizio Manuel Flores Valencia</title>
-
-    <meta name="description"
-    content="Página personal de Fabrizio Manuel Flores Valencia, estudiante de Ciencias de la Computación en la UCSP">
-
-    <style>
-
-        html{
-            scroll-behavior: smooth;
-        }
-
-        body{
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #0f0f0f, #1f1f1f, #2d3436);
-            background-size: 400% 400%;
-            animation: fondo 12s ease infinite;
-            color: white;
-        }
-
-        @keyframes fondo{
-            0%{
-                background-position: 0% 50%;
-            }
-
-            50%{
-                background-position: 100% 50%;
-            }
-
-            100%{
-                background-position: 0% 50%;
-            }
-        }
-
-        .navbar{
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-
-            display: flex;
-            justify-content: center;
-            gap: 40px;
-
-            padding: 20px;
-
-            background: rgba(0,0,0,0.6);
-            backdrop-filter: blur(10px);
-
-            box-shadow: 0px 5px 20px rgba(0,0,0,0.5);
-        }
-
-        .navbar a{
-            color: white;
-            text-decoration: none;
-            font-size: 18px;
-            transition: 0.3s;
-        }
-
-        .navbar a:hover{
-            color: #4da6ff;
-            transform: scale(1.1);
-        }
-
-        .bienvenida{
-        text-align: center;
-        padding: 70px 20px 10px 20px;
-
-        font-size: 22px;
-        font-weight: 300;
-        letter-spacing: 8px;
-
-        text-transform: uppercase;
-
-        color: #bdbdbd;
-
-            animation: aparecer 2s ease;
-        }
-        .typing{
-            width: 100%;
-            overflow: hidden;
-            white-space: nowrap;
-
-            border-right: 3px solid white;
-
-            text-align: center;
-            font-size: 60px;
-
-            margin: auto;
-
-            animation:
-            typing 4s steps(40),
-            blink .8s infinite;
-        }
-
-        @keyframes typing{
-            from{
-                width: 0;
-            }
-
-            to{
-                width: 100%;
-            }
-        }
-
-        @keyframes blink{
-            50%{
-                border-color: transparent;
-            }
-        }
-
-        .caja{
-            width: 75%;
-
-            margin: 80px auto;
-
-            padding: 40px;
-
-            border-radius: 25px;
-
-            background: rgba(255,255,255,0.08);
-
-            backdrop-filter: blur(10px);
-
-            box-shadow: 0px 10px 40px rgba(0,0,0,0.6);
-
-            transition: 0.4s;
-
-            animation: aparecer 1.5s ease;
-        }
-
-        .caja:hover{
-            transform: translateY(-10px) scale(1.01);
-        }
-
-        .sobre{
-            border-left: 8px solid #4da6ff;
-        }
-
-        .cursos{
-            border-left: 8px solid #9b59b6;
-        }
-
-        .companeros{
-            border-left: 8px solid #2ecc71;
-        }
-
-        .metas{
-            border-left: 8px solid #f39c12;
-        }
-
-        .contacto{
-            border-left: 8px solid #e74c3c;
-        }
-
-        .fila{
-            display: flex;
-            justify-content: center;
-            gap: 35px;
-
-            margin: 60px;
-
-            flex-wrap: wrap;
-        }
-
-        .mini-caja{
-            width: 240px;
-
-            padding: 30px;
-
-            border-radius: 20px;
-
-            background: rgba(255,255,255,0.08);
-
-            backdrop-filter: blur(10px);
-
-            box-shadow: 0px 8px 20px rgba(0,0,0,0.5);
-
-            transition: 0.4s;
-
-            animation: zoom 1.5s ease;
-        }
-
-        .mini-caja:hover{
-            transform: scale(1.08);
-        }
-
-        .edad{
-            border-top: 6px solid #3498db;
-        }
-
-        .ciudad{
-            border-top: 6px solid #9b59b6;
-        }
-
-        .habilidades{
-            border-top: 6px solid #2ecc71;
-        }
-
-        @keyframes aparecer{
-            from{
-                opacity: 0;
-                transform: translateY(40px);
-            }
-
-            to{
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes zoom{
-            from{
-                opacity: 0;
-                transform: scale(0.5);
-            }
-
-            to{
-                opacity: 1;
-                transform: scale(1);
-            }
-        }
-
-        h1{
-            text-align: center;
-        }
-
-        h2{
-            font-size: 32px;
-            margin-bottom: 20px;
-        }
-
-        p, li{
-            font-size: 20px;
-            line-height: 1.8;
-        }
-
-        ul{
-            list-style: none;
-            padding: 0;
-        }
-
-        a{
-            color: #4da6ff;
-            text-decoration: none;
-            transition: 0.3s;
-        }
-
-        a:hover{
-            color: white;
-        }
-
-        .footer{
-            text-align: center;
-
-            margin-top: 80px;
-
-            padding: 30px;
-
-            background: rgba(0,0,0,0.4);
-
-            font-size: 18px;
-        }
-
-    </style>
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fabrizio Manuel Flores Valencia</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:
+    radial-gradient(circle at top left,#2563eb 0%,transparent 30%),
+    radial-gradient(circle at bottom right,#7c3aed 0%,transparent 30%),
+    #0f172a;
+    color:white;
+}
+
+.navbar{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    padding:20px;
+    position:sticky;
+    top:0;
+    background:rgba(0,0,0,.4);
+    backdrop-filter:blur(12px);
+}
+
+.navbar a{
+    color:white;
+    text-decoration:none;
+}
+
+.navbar a:hover{
+    color:#60a5fa;
+}
+
+.hero{
+    text-align:center;
+    padding:80px 20px;
+}
+
+.hero h1{
+    font-size:60px;
+}
+
+.hero p{
+    color:#cbd5e1;
+}
+
+.caja{
+    width:80%;
+    margin:30px auto;
+    padding:30px;
+    border-radius:20px;
+    background:rgba(255,255,255,.05);
+    border:1px solid rgba(255,255,255,.1);
+    backdrop-filter:blur(15px);
+}
+
+.caja:hover{
+    transform:translateY(-5px);
+    transition:.3s;
+}
+
+.fila{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+    margin:30px;
+}
+
+.mini-caja{
+    width:250px;
+    padding:20px;
+    border-radius:20px;
+    background:rgba(255,255,255,.05);
+    border:1px solid rgba(255,255,255,.1);
+    text-align:center;
+}
+
+h2{
+    color:#93c5fd;
+    margin-bottom:15px;
+}
+
+ul{
+    list-style:none;
+}
+
+li{
+    margin:10px 0;
+}
+
+a{
+    color:#60a5fa;
+}
+
+.footer{
+    text-align:center;
+    padding:30px;
+    color:#cbd5e1;
+}
+</style>
 </head>
 
 <body>
 
-    <div class="navbar">
+<div class="navbar">
+<a href="#sobre">Sobre mí</a>
+<a href="#cursos">Cursos</a>
+<a href="#companeros">Compañeros</a>
+<a href="#contacto">Contacto</a>
+</div>
 
-        <a href="#sobre">Sobre mí</a>
+<div class="hero">
+<h1>Fabrizio Flores Valencia</h1>
+<p>Estudiante de Ciencias de la Computación - UCSP</p>
+</div>
 
-        <a href="#cursos">Cursos</a>
+<div class="caja" id="sobre">
+<h2>Sobre mí</h2>
+<p>
+Soy estudiante de Ciencias de la Computación en la Universidad Católica San Pablo.
+Me interesa la programación, especialmente Python, la lógica, los algoritmos y el trabajo en equipo.
+</p>
+</div>
 
-        <a href="#companeros">Compañeros</a>
+<div class="fila">
+<div class="mini-caja">
+<h2>Edad</h2>
+<p>17 años</p>
+</div>
 
-        <a href="#contacto">Contacto</a>
+<div class="mini-caja">
+<h2>Ciudad</h2>
+<p>Arequipa, Perú</p>
+</div>
 
-    </div>
+<div class="mini-caja">
+<h2>Habilidades</h2>
+<p>Python<br>Trabajo en equipo<br>Resolución de problemas</p>
+</div>
+</div>
 
-    <div class="bienvenida">
-        Bienvenido a mi página web
-    </div>
+<div class="caja" id="cursos">
+<h2>Cursos y Profesores</h2>
+<ul>
+<li>Introducción a la Vida Universitaria - Claudia Lucia Quiroz Pacheco</li>
+<li>Comunicación IV - Lourdes Eliana Velarde Ortiz</li>
+<li>Lógica - <a href="https://www.linkedin.com/in/solange-tejada/" target="_blank">Solange Tejada Cuadros</a></li>
+<li>Fundamentos de Programación - <a href="https://www.linkedin.com/in/kelly-vizconde-la-motta-3a57a4143/" target="_blank">Kelly Vizconde La Motta</a></li>
+<li>Fundamentos Matemáticos para Computación - <a href="https://www.linkedin.com/in/fiorella-maría-rendón-garcía-7aa9b7374/" target="_blank">Fiorella Rendón García</a></li>
+<li>Introducción a Computación - <a href="https://www.linkedin.com/in/ecuadrosv/" target="_blank">Ernesto Cuadros Vargas</a></li>
+</ul>
+</div>
 
-    <h1 class="typing">
-        Fabrizio Manuel Flores Valencia
-    </h1>
+<div class="caja" id="companeros">
+<h2>Compañeros</h2>
+<ul>
+<li><a href="https://faviom15.github.io/favio-cesar-portfolio/" target="_blank">Favio Mendigure</a></li>
+<li>Eros Caldenhoven</li>
+<li>Jaime Chavez</li>
+<li>Joaquín Calle</li>
+<li><a href="https://mateomaldonadovalencia.github.io/" target="_blank">Mateo Maldonado</a></li>
+<li><a href="https://fernandoucsp.github.io/proyecto2/" target="_blank">Fernando Barra</a></li>
+</ul>
+</div>
 
-    <div class="caja sobre" id="sobre">
-
-        <h2>Sobre mí</h2>
-
-        <p>
-            Soy estudiante de Ciencias de la Computación en la Universidad Católica San Pablo (UCSP).
-            Me interesa la programación, la tecnología y el desarrollo de software.
-            Me considero una persona responsable, curiosa y con capacidad de trabajo en equipo.
-        </p>
-
-    </div>
-
-    <div class="fila">
-
-        <div class="mini-caja edad">
-
-            <h2>Edad</h2>
-
-            <p>
-                17 años
-            </p>
-
-        </div>
-
-        <div class="mini-caja ciudad">
-
-            <h2>Ciudad</h2>
-
-            <p>
-                Arequipa, Perú
-            </p>
-
-        </div>
-
-        <div class="mini-caja habilidades">
-
-            <h2>Habilidades</h2>
-
-            <p>
-                Python <br>
-                Trabajo en equipo
-            </p>
-
-        </div>
-
-    </div>
-
-    <div class="caja cursos" id="cursos">
-
-        <h2>Cursos y Profesores</h2>
-
-        <ul>
-
-            <li>
-                Introducción a la Vida Universitaria —
-                QUIROZ PACHECO CLAUDIA LUCIA
-            </li>
-
-            <br>
-
-            <li>
-                Comunicación —
-                VELARDE ORTIZ LOURDES ELIANA
-            </li>
-
-            <br>
-
-            <li>
-                Lógica —
-                <a href="https://www.linkedin.com/in/solange-tejada/" target="_blank">
-                    TEJADA CUADROS SOLANGE XIMENA
-                </a>
-            </li>
-
-            <br>
-
-            <li>
-                Fundamentos de Programación —
-                <a href="https://www.linkedin.com/in/kelly-vizconde-la-motta-3a57a4143/" target="_blank">
-                    VIZCONDE LA MOTTA KELLY
-                </a>
-            </li>
-
-            <br>
-
-            <li>
-                Fundamentos Matemáticos para Computación —
-                <a href="https://www.linkedin.com/in/fiorella-maría-rendón-garcía-7aa9b7374/" target="_blank">
-                    RENDON GARCIA FIORELLA MARIA
-                </a>
-            </li>
-
-            <br>
-
-            <li>
-                Introducción a Computación —
-                <a href="https://www.linkedin.com/in/ecuadrosv/" target="_blank">
-                    CUADROS VARGAS ERNESTO
-                </a>
-            </li>
-
-        </ul>
-
-    </div>
-
-    <div class="caja companeros" id="companeros">
-
-        <h2>Compañeros</h2>
-
-        <ul>
-
-            <li>
-                <a href="https://faviom15.github.io/favio-cesar-portfolio/" target="_blank">
-                    Favio Mendigure
-                </a>
-            </li>
-
-            <br>
-
-            <li>
-                <a href="#">
-                    Eros Caldenhoven
-                </a>
-            </li>
-
-            <br>
-
-            <li>
-                <a href="#">
-                    Jaime Chavez
-                </a>
-            </li>
-
-            <br>
-
-            <li>
-                <a href="#">
-                    Joaquin Calle
-                </a>
-            </li>
-
-            <br>
-
-            <li>
-                <a href="https://mateomaldonadovalencia.github.io/" target="_blank">
-                    Mateo Maldonado
-                </a>
-            </li>
-
-        </ul>
-
-    </div>
-
-    <div class="caja metas">
-
-        <h2>Metas</h2>
-
-        <p>
-            Construir un buen futuro haciendo lo que me gusta,
-            crecer personal y profesionalmente y seguir aprendiendo sobre tecnología.
-        </p>
-
-    </div>
-
-    <div class="caja contacto" id="contacto">
+<div class="caja" id="contacto">
 <h2>Contacto</h2>
+<p>Correo: fabrizio.flores.valencia@ucsp.edu.pe</p>
+<p><a href="https://www.linkedin.com/in/fabrizio-flores-valencia-796410412/" target="_blank">LinkedIn</a></p>
+<p><a href="https://instagram.com/fabrz.flv" target="_blank">Instagram</a></p>
+</div>
 
-<p>
-
-    <a href="#"
-    onclick="copiarCorreo()"
-    class="correo">
-
-        fabrizio.flores.valencia@ucsp.edu.pe
-
-    </a>
-
-</p>
-
-<p>
-
-    LinkedIn:
-    
-    <a href="https://www.linkedin.com/in/fabrizio-flores-valencia-796410412/" target="_blank">
-
-        Ver perfil
-
-    </a>
-
-</p>
-
-<p>
-
-    Instagram:
-
-    <a href="https://instagram.com/fabrz.flv" target="_blank">
-
-        @fabrz.flv
-
-    </a>
-
-</p>
-
-    </div>
-
-    <div class="footer">
-        ¡Gracias por visitar mi página web!
-    </div>
+<div class="footer">
+Gracias por visitar mi página web
+</div>
 
 </body>
-
 </html>
